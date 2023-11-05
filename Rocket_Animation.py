@@ -37,9 +37,6 @@ from random import randint
 WindowStartx = DisplayWidth//2
 WindowStarty = DisplayHeight//3
 
-class WindowManager(ScreenManager):
-	pass
-	
 class RocketButton(Button):
 	def __init__(self,**kwargs):
 		super(RocketButton, self).__init__(**kwargs)
