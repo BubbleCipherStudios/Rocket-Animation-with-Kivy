@@ -423,7 +423,7 @@ class RocketWidget(Widget):
 	def redraw(self, *args):
 		self.rocket_rect.pos = self.pos
 		
-class CssAnimationApp(App):
+class RocketAnimationApp(App):
 	def build(self):
 		sm = ScreenManager()
 		sm.add_widget(MenuScreen(name='mainmenu'))
@@ -436,4 +436,4 @@ if __name__ == '__main__':
 	if hasattr(sys, '_MEIPASS'):
 		resource_add_path(os.path.join(sys._MEIPASS))
 		
-	CssAnimationApp().run()
+	RocketAnimationApp().run()
