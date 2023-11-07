@@ -71,8 +71,6 @@ class ClickmeLabel(Label):
 
 		self.font_size='30sp'
 		self.bind(size=self.setter('text_size'))
-		#self.pos=(WindowStartx, (DisplayHeight/2))
-	
 	
 class MenuScreen(Screen):
 	def __init__(self, **kwargs):
@@ -94,10 +92,7 @@ class RocketScreen(Screen):
 		super(RocketScreen, self).__init__(**kwargs)
 	
 	def on_pre_enter(self):
-	
-		#bx = BoxLayout()
 		self.add_widget(MainLayout())
-		#self.add_widget(bx)
 
 class MainLayout(FloatLayout):
 	def __init__(self,**kwargs):
@@ -126,10 +121,7 @@ class MainLayout(FloatLayout):
 			self.parent.manager.current = 'mainmenu'
 			self.rocket.animation_clock.cancel()
 			self.parent.remove_widget(self)
-			
-		
-	#def on_parent(self, widget, parent):
-		#self.size = (parent.width, parent.height)
+
 		
 class Fallingline(Widget):
 	def __init__(self, **kwargs):
@@ -145,9 +137,6 @@ class Fallingline(Widget):
 		
 		self.scale = randint(1,4)
 		
-		###ADD DELAY ###
-
-
 		Clock.schedule_once(self.start_anim, randint(1,3))
 
 	#there will be a for loop that determines the index for this function	
